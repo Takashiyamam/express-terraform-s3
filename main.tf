@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "express-terraform-s3-terraform-state-bucket"
+    bucket         = "express-terraform-s3-terraform-state"
     key            = "express-terraform-s3.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "express-terraform-s3-terraform-state-lock-table"
+    dynamodb_table = "express-terraform-s3-terraform-state-lock"
     encrypt        = true
   }
 
@@ -29,6 +29,7 @@ provider "aws" {
   }
 }
 
+# Actual Resources
 resource "aws_instance" "app_server" {
   ami           = "ami-0e54eba7c51c234f6"
   instance_type = "t2.micro"
