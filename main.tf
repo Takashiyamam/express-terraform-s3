@@ -29,13 +29,13 @@ provider "aws" {
   }
 }
 
-# Actual Resources
-resource "aws_instance" "app_server" {
-  ami           = "ami-0e54eba7c51c234f6"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "ExampleAppServerInstance"
-  }
+## Actual Resources
+#resource "aws_instance" "app_server" {
+#  ami           = "ami-0e54eba7c51c234f6"
+#  instance_type = "t2.micro"
+#
+#  tags = {
+#    Name = "ExampleAppServerInstance"
+#  }
 }
 
